@@ -30,3 +30,11 @@ body {
 .search-button {
   padding-right: 10px;
 }
+
+.card {
+  width: 200%;
+}
+
+.center-text {
+  text-align: center;
+}
