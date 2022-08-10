@@ -1,0 +1,28 @@
+header {
+  background-color: #d9a030;
+  color: white;
+  font-family:
+    "Rubik Mono One",
+    sans-serif;
+  padding: 0.5px;
+  font-size: 10px;
+}
+
+body {
+  background-color: #d9d9d9;
+}
+
+.center-align {
+  justify-content: center;
+}
+
+.search-bar {
+  padding-top: 20px;
+}
+
+.search-input {
+  font-size: 30px;
+  border-radius: 10px;
+  border-style: none;
+  padding-left: 13px;
+}
