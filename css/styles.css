@@ -22,7 +22,11 @@ body {
 
 .search-input {
   font-size: 30px;
-  border-radius: 10px;
+  border-radius: 20px;
   border-style: none;
   padding-left: 13px;
+}
+
+.search-button {
+  padding-right: 10px;
 }
