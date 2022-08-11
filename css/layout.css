@@ -3,9 +3,8 @@
 }
 
 .container {
-  max-width: 575px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .row {
@@ -23,19 +22,17 @@
 
 .column-fifth {
   width: 20%;
+  padding: 0 10px;
+  margin: 20px 0;
 }
 
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 900px;
-  }
-
-  .column-full,
-  .column-half {
-    padding: 0 0.75rem;
+    max-width: 100vw;
+    max-height: 100vh;
   }
 
   .column-half {
-    width: 50%;
+    width: 100%;
   }
 }

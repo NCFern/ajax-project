@@ -18,6 +18,7 @@ body {
 
 .search-bar {
   padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .search-input {
@@ -28,13 +29,17 @@ body {
 }
 
 .search-button {
-  padding-right: 10px;
+  font-size: large;
 }
 
 .card {
-  width: 200%;
+  width: 100%;
 }
 
 .center-text {
   text-align: center;
+}
+
+.no-card-text {
+  padding-left: 275px;
 }

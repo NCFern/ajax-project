@@ -15,7 +15,7 @@ function showResults(event) {
     if (xhr.status === 200) {
       for (let i = 0; i < this.response.data[0].card_images.length; i++) {
         var div = document.createElement('div');
-        div.setAttribute('class', 'column-fifth card-wrapper');
+        div.setAttribute('class', 'column-fifth');
         div.setAttribute('data-result-id', data.resultId);
         data.resultId++;
         var img = document.createElement('img');
@@ -27,9 +27,9 @@ function showResults(event) {
       }
     } else if (xhr.status === 400) {
       var noCard = document.createElement('div');
-      noCard.setAttribute('class', 'row');
+      noCard.setAttribute('class', 'row center-align');
       var h1 = document.createElement('h1');
-      h1.setAttribute('class', 'center-text no-card-found');
+      h1.setAttribute('class', 'no-card-text');
       var noCardFoundText = document.createTextNode('No Card Found');
       h1.appendChild(noCardFoundText);
       noCard.appendChild(h1);
