@@ -22,22 +22,25 @@ body {
 }
 
 .search-input {
-  font-size: 30px;
+  font-size: 35px;
   border-radius: 20px;
   border-style: none;
   padding-left: 13px;
-  position: relative;
+
+  /* position: absolute; */
 }
 
 .search-button {
   background-color: white;
-  position: absolute;
-  left: 2;
+  font-size: 35px;
+
+  /* position: relative;
+  margin-left: 330px;
+  margin-top: 2px; */
 }
 
-.fa-solid {
-  color: black;
-  font-size: 35px;
+.search-results {
+  width: 100%;
 }
 
 .card {
@@ -49,5 +52,6 @@ body {
 }
 
 .no-card-text {
-  padding-left: 420px;
+  padding-left: 500px;
+  text-align: center;
 }
