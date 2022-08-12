@@ -1,0 +1,51 @@
+header {
+  background-color: #d9a030;
+  color: white;
+  font-family:
+    "Rubik Mono One",
+    sans-serif;
+  padding: 0.5px;
+  font-size: 10px;
+}
+
+body {
+  background-color: #d9d9d9;
+}
+
+.center-align {
+  justify-content: center;
+}
+
+.search-bar {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.search-input {
+  font-size: 35px;
+  border-radius: 20px;
+  border-style: none;
+  padding-left: 13px;
+}
+
+.search-button {
+  background-color: white;
+  font-size: 35px;
+}
+
+.search-results {
+  width: 100%;
+}
+
+.card {
+  width: 100%;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.no-card-text {
+  padding-left: 500px;
+  text-align: center;
+}
