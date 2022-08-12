@@ -26,10 +26,18 @@ body {
   border-radius: 20px;
   border-style: none;
   padding-left: 13px;
+  position: relative;
 }
 
 .search-button {
-  font-size: large;
+  background-color: white;
+  position: absolute;
+  left: 2;
+}
+
+.fa-solid {
+  color: black;
+  font-size: 35px;
 }
 
 .card {
@@ -41,5 +49,5 @@ body {
 }
 
 .no-card-text {
-  padding-left: 275px;
+  padding-left: 420px;
 }
