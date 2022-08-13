@@ -27,7 +27,7 @@ function showResults(event) {
       }
     } else if (xhr.status === 400) {
       var noCard = document.createElement('div');
-      noCard.setAttribute('class', 'row center-align');
+      noCard.setAttribute('class', 'row');
       var h1 = document.createElement('h1');
       h1.setAttribute('class', 'no-card-text');
       var noCardFoundText = document.createTextNode('No Card Found');

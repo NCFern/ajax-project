@@ -40,12 +40,3 @@ body {
 .card {
   width: 100%;
 }
-
-.center-text {
-  text-align: center;
-}
-
-.no-card-text {
-  padding-left: 500px;
-  text-align: center;
-}
