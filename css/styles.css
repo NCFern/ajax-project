@@ -40,3 +40,7 @@ body {
 .card {
   width: 100%;
 }
+
+.blank-card {
+  position: fixed;
+}

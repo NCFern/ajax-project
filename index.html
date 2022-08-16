@@ -21,16 +21,41 @@
   </header>
   <main>
     <div class="container">
-      <div class="row center-align">
-        <form class="search-bar">
-          <input id="search-input" class="search-input" type="search" placeholder="Search" required>
-          <button id="search-button" class="search-button" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-        </form>
+
+      <div class="view" data-view="search">
+        <div class="row center-align">
+          <form class="search-bar">
+            <input id="search-input" class="search-input" type="search" placeholder="Search" required>
+            <button id="search-button" class="search-button" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+        </div>
+        <div class="row">
+          <div id="search-results" class="row search-results center-align">
+            <!--search results from DOM go here-->
+          </div>
+        </div>
+      </div>
+
+      <div class="view" data-view="details">
+        <div class="row">
+          <div class="column-third">
+            <!-- card from dom -->
+          </div>
+          <div class="column-third">
+            <button class="return-button" id="return-button" type="submit">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div class="column-third">
+
+            <img class="blank-card" src="images/blankCard.png" alt="blankCards">
+
+          </div>
+
+        </div>
 
       </div>
-      <div class="row">
-        <div id="search-results" class="row search-results center-align"></div>
-      </div>
+
     </div>
   </main>
   <script src="js/data.js"></script>
