@@ -33,6 +33,11 @@ body {
   font-size: 35px;
 }
 
+.search-button:hover {
+  cursor: pointer;
+  color: #d9a030;
+}
+
 .search-results {
   width: 100%;
 }
@@ -42,5 +47,38 @@ body {
 }
 
 .blank-card {
-  position: fixed;
+  position: absolute;
+}
+
+.card-text {
+  text-align: center;
+  font-size: 20px;
+  position: relative;
+}
+
+.padding-top {
+  padding-top: 20px;
+}
+
+.align-self {
+  align-self: flex-end;
+}
+
+.fa-xmark {
+  font-size: 100px;
+  border-style: none;
+}
+
+.fa-xmark:hover {
+  cursor: pointer;
+  color: #d9a030;
+}
+
+button {
+  background-color: #d9d9d9;
+  border-style: none;
+}
+
+.space-evenly {
+  justify-content: space-evenly;
 }
