@@ -86,3 +86,7 @@ button {
 .space-evenly {
   justify-content: space-evenly;
 }
+
+.center-card {
+  justify-self: center;
+}
