@@ -1,6 +1,18 @@
 var $searchInput = document.querySelector('#search-input');
 var $searchButton = document.querySelector('#search-button');
 var $searchResults = document.querySelector('#search-results');
+var $dataView = document.querySelectorAll('[data-view');
+var $returnButton = document.querySelector('.return-button');
+
+var $cardImage = document.querySelector('.selected-card');
+var $cardName = document.querySelector('.card-name');
+var $cardSet = document.querySelector('.card-set');
+var $cardRarity = document.querySelector('.card-rarity');
+var $priceTcg = document.querySelector('.card-tcgplayer');
+var $priceAmazon = document.querySelector('.card-amazon');
+var $priceEbay = document.querySelector('.card-ebay');
+
+var $response = {};
 
 $searchButton.addEventListener('click', showResults);
 
@@ -12,6 +24,7 @@ function showResults(event) {
   xhr.open('GET', 'https://db.ygoprodeck.com/api/v7/cardinfo.php?fname=' + $searchInput.value);
   xhr.responseType = 'json';
   xhr.addEventListener('load', function () {
+    $response = xhr.response;
     if (xhr.status === 200) {
       for (let i = 0; i < this.response.data[0].card_images.length; i++) {
         var div = document.createElement('div');
@@ -37,4 +50,36 @@ function showResults(event) {
     }
   });
   xhr.send();
+}
+
+$returnButton.addEventListener('click', clickReturn);
+
+function viewSwap(viewName) {
+  for (var i = 0; i < $dataView.length; i++) {
+    if ($dataView[i].getAttribute('data-view') === viewName) {
+      $dataView[i].className = 'view';
+    } else if ($dataView[i].getAttribute('data-view') !== viewName) {
+      $dataView[i].className = 'view hidden';
+    }
+  }
+}
+
+function clickReturn(event) {
+  viewSwap('search');
+}
+
+$searchResults.addEventListener('click', renderDetails);
+
+function renderDetails(event) {
+  if (event.target.className === 'card') {
+    $cardImage.setAttribute('src', $searchResults.childNodes[event.target.closest('div').getAttribute('data-result-id')].childNodes[0].src);
+    $cardName.textContent = $response.data[0].name;
+    $cardSet.textContent = $response.data[0].card_sets[0].set_name;
+    $cardRarity.textContent = $response.data[0].card_sets[0].set_rarity;
+    $priceTcg.textContent = 'TCG Player = $' + $response.data[0].card_prices[0].tcgplayer_price;
+    $priceAmazon.textContent = 'Amazon = $' + $response.data[0].card_prices[0].amazon_price;
+    $priceEbay.textContent = 'Ebay = $' + $response.data[0].card_prices[0].ebay_price;
+
+    viewSwap('details');
+  }
 }
