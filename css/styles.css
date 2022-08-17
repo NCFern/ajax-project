@@ -46,6 +46,10 @@ body {
   width: 100%;
 }
 
+.card:hover {
+  cursor: pointer;
+}
+
 .blank-card {
   position: absolute;
 }
