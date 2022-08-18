@@ -33,6 +33,11 @@ body {
   font-size: 35px;
 }
 
+.search-button:hover {
+  cursor: pointer;
+  color: #d9a030;
+}
+
 .search-results {
   width: 100%;
 }
@@ -41,11 +46,55 @@ body {
   width: 100%;
 }
 
-.center-text {
-  text-align: center;
+.card:hover {
+  cursor: pointer;
 }
 
-.no-card-text {
-  padding-left: 500px;
+/* .blank-card {
+  position: absolute;
+  width: 60vh;
+  height: 90vh;
+} */
+
+.card-text {
   text-align: center;
+  border: solid 2px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.card-prices {
+  text-align: center;
+  border: solid 2px;
+}
+
+.padding-top {
+  padding-top: 20px;
+}
+
+.align-self {
+  align-self: flex-end;
+}
+
+.fa-xmark {
+  font-size: 100px;
+  border-style: none;
+}
+
+.fa-xmark:hover {
+  cursor: pointer;
+  color: #d9a030;
+}
+
+button {
+  background-color: #d9d9d9;
+  border-style: none;
+}
+
+.space-evenly {
+  justify-content: space-evenly;
+}
+
+.center-card {
+  justify-content: center;
 }

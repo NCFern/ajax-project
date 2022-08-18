@@ -21,16 +21,52 @@
   </header>
   <main>
     <div class="container">
-      <div class="row center-align">
-        <form class="search-bar">
-          <input id="search-input" class="search-input" type="search" placeholder="Search" required>
-          <button id="search-button" class="search-button" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-        </form>
 
+      <div class="view" data-view="search">
+        <div class="row center-align">
+          <form class="search-bar">
+            <input id="search-input" class="search-input" type="search" placeholder="Search" required>
+            <button id="search-button" class="search-button" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+        </div>
+        <div class="row">
+          <div id="search-results" class="row search-results center-align">
+            <!--search results from DOM go here-->
+          </div>
+        </div>
       </div>
-      <div class="row">
-        <div id="search-results" class="row search-results"></div>
+
+      <div class="view hidden" data-view="details">
+        <div class="row center-align space-evenly padding-top">
+          <div class="column-third">
+            <img class="selected-card" src="" alt="selected-card">
+          </div>
+          <div class="column-third align-self">
+            <button class="return-button" id="return-button" type="submit">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div class="column-third">
+            <div class="center-card">
+              <!-- <img class="blank-card" src="images/blankCard.png" alt="blankCards"> -->
+            </div>
+            <div class="card-text">
+              <h2 class="card-name"></h2>
+              <h3 class="card-set"></h3>
+              <h3 class="card-rarity"></h3>
+              <!-- <p class="card-desc"></p> -->
+
+            </div>
+            <div class="card-prices">
+              <h2>Card Prices</h2>
+              <p class="card-tcgplayer"></p>
+              <p class="card-amazon"></p>
+              <p class="card-ebay"></p>
+            </div>
+          </div>
+        </div>
       </div>
+
     </div>
   </main>
   <script src="js/data.js"></script>
