@@ -50,16 +50,22 @@ body {
   cursor: pointer;
 }
 
-.blank-card {
+/* .blank-card {
   position: absolute;
   width: 60vh;
   height: 90vh;
-}
+} */
 
 .card-text {
   text-align: center;
-  font-size: 15px;
-  position: relative;
+  border: solid 2px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.card-prices {
+  text-align: center;
+  border: solid 2px;
 }
 
 .padding-top {
