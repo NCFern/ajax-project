@@ -52,11 +52,13 @@ body {
 
 .blank-card {
   position: absolute;
+  width: 60vh;
+  height: 90vh;
 }
 
 .card-text {
   text-align: center;
-  font-size: 20px;
+  font-size: 15px;
   position: relative;
 }
 
@@ -88,5 +90,5 @@ button {
 }
 
 .center-card {
-  justify-self: center;
+  justify-content: center;
 }
