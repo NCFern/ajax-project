@@ -2,17 +2,17 @@
 
 var data = {
   view: 'search',
-  storedCards: {
+  favoriteCards: {
     cards: [],
     nextCardId: 0
   },
   resultId: 1
 };
 
-var storedEntries = localStorage.getItem('storedEntries');
+var storedCards = localStorage.getItem('storedCards');
 
-if (storedEntries !== null) {
-  data = JSON.parse(storedEntries);
+if (storedCards !== null) {
+  data = JSON.parse(storedCards);
 }
 
 window.addEventListener('beforeunload', saveEntries);
