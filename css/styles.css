@@ -72,8 +72,8 @@ body {
   padding-top: 20px;
 }
 
-.align-self {
-  align-self: flex-end;
+.align-buttons {
+  align-content: flex-end;
 }
 
 .fa-xmark {
@@ -97,4 +97,18 @@ button {
 
 .center-card {
   justify-content: center;
+}
+
+.fa-heart {
+  font-size: 100px;
+  border-style: none;
+}
+
+.fa-heart:hover {
+  cursor: pointer;
+  color: #d9a030;
+}
+
+.fa-heart:active {
+  transform: translateY(1.5rem);
 }
