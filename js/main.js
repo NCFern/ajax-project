@@ -3,6 +3,7 @@ var $searchButton = document.querySelector('#search-button');
 var $searchResults = document.querySelector('#search-results');
 var $dataView = document.querySelectorAll('[data-view');
 var $returnButton = document.querySelector('.return-button');
+var $favorirteButton = document.querySelector('.favorite-button');
 
 var $cardImage = document.querySelector('.selected-card');
 var $cardName = document.querySelector('.card-name');
@@ -83,5 +84,16 @@ function renderDetails(event) {
     $priceEbay.textContent = 'Ebay = $' + $response.data[0].card_prices[0].ebay_price;
 
     viewSwap('details');
+  }
+}
+
+$favorirteButton.addEventListener('click', addFavorites);
+
+function addFavorites(event) {
+  if (event.target.getAttribute('id') === 'favorite-button') {
+    data.favoriteCards.cards.push($response);
+    data.favoriteCards.cards[data.favoriteCards.nextCardId].imageUrl = $searchResults.childNodes[event.target.closest('div').getAttribute('data-result-id')].childNodes[0].src;
+    data.favoriteCards.cards[data.favoriteCards.nextCardId].cardId = data.favoriteCards.nextCardId;
+    data.favoriteCards.cards.nextCardId++;
   }
 }
