@@ -9,14 +9,14 @@ var data = {
   resultId: 1
 };
 
-var storedCards = localStorage.getItem('storedCards');
+var previousCards = localStorage.getItem('storedCards');
 
-if (storedCards !== null) {
-  data = JSON.parse(storedCards);
+if (previousCards !== null) {
+  data = JSON.parse(previousCards);
 }
 
-window.addEventListener('beforeunload', saveEntries);
+window.addEventListener('beforeunload', saveCards);
 
-function saveEntries(event) {
-  localStorage.setItem('storedEntries', JSON.stringify(data));
+function saveCards(event) {
+  localStorage.setItem('storedCards', JSON.stringify(data));
 }

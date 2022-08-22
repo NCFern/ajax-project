@@ -3,7 +3,7 @@ var $searchButton = document.querySelector('#search-button');
 var $searchResults = document.querySelector('#search-results');
 var $dataView = document.querySelectorAll('[data-view');
 var $returnButton = document.querySelector('.return-button');
-var $favorirteButton = document.querySelector('.favorite-button');
+var $favoriteButton = document.querySelector('.favorite-button');
 
 var $cardImage = document.querySelector('.selected-card');
 var $cardName = document.querySelector('.card-name');
@@ -87,13 +87,14 @@ function renderDetails(event) {
   }
 }
 
-$favorirteButton.addEventListener('click', addFavorites);
+$favoriteButton.addEventListener('click', addFavorites);
 
 function addFavorites(event) {
-  if (event.target.getAttribute('id') === 'favorite-button') {
+  // console.log(event.target);
+  if (event.target.getAttribute('data-result-id') === 'favorite-button') {
     data.favoriteCards.cards.push($response);
     data.favoriteCards.cards[data.favoriteCards.nextCardId].imageUrl = $searchResults.childNodes[event.target.closest('div').getAttribute('data-result-id')].childNodes[0].src;
     data.favoriteCards.cards[data.favoriteCards.nextCardId].cardId = data.favoriteCards.nextCardId;
-    data.favoriteCards.cards.nextCardId++;
+    data.favoriteCards.nextCardId++;
   }
 }
