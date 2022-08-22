@@ -91,7 +91,7 @@ $favoriteButton.addEventListener('click', addFavorites);
 
 function addFavorites(event) {
   // console.log(event.target);
-  if (event.target.getAttribute('data-result-id') === 'favorite-button') {
+  if (event.target.getAttribute('selected-card') === 'favorite-button') {
     data.favoriteCards.cards.push($response);
     data.favoriteCards.cards[data.favoriteCards.nextCardId].imageUrl = $searchResults.childNodes[event.target.closest('div').getAttribute('data-result-id')].childNodes[0].src;
     data.favoriteCards.cards[data.favoriteCards.nextCardId].cardId = data.favoriteCards.nextCardId;
