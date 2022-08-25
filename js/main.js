@@ -89,12 +89,20 @@ function renderDetails(event) {
 
 $favoriteButton.addEventListener('click', addFavorites);
 
-function addFavorites(event) {
-  // console.log($response);
-  if (event.target.getAttribute($response) === 'favorite-button') {
-    data.favoriteCards.cards.push($response);
-    data.favoriteCards.cards[data.favoriteCards.nextCardId].imageUrl = $searchResults.childNodes[event.target.closest('div').getAttribute('data-result-id')].childNodes[0].src;
-    data.favoriteCards.cards[data.favoriteCards.nextCardId].cardId = data.favoriteCards.nextCardId;
-    data.favoriteCards.nextCardId++;
-  }
+function saveCards(event) {
+  // console.log(data);
+  localStorage.setItem('storedCards', JSON.stringify(data));
 }
+
+function addFavorites(event) {
+  var stuff = $response.data;
+  // console.log(stuff);
+  data.favoriteCards.cards.push(stuff);
+  data.favoriteCards.cards[data.favoriteCards.nextCardId].imageUrl = stuff[0].card_images[0].image_url;
+  data.favoriteCards.cards[data.favoriteCards.nextCardId].cardId = data.favoriteCards.nextCardId;
+  data.favoriteCards.nextCardId++;
+  saveCards(event);
+}
+
+// On card search success, check if the cards Id is in data.facoriteCards.cards array //
+// And if it is, add attribute to heart button to change color to orange (or whatever) //
