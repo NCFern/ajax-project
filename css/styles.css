@@ -104,6 +104,12 @@ button {
   border-style: none;
 }
 
+.fa-heart-clicked {
+  font-size: 100px;
+  border-style: none;
+  color: #d9a030;
+}
+
 .fa-heart:hover {
   cursor: pointer;
   color: #d9a030;
